@@ -1,0 +1,17 @@
+---
+import "../styles/global.css";
+const { url, name } = Astro.props;
+let max_w = 40;
+let min_w = 38;
+let max_h = 24 * 2;
+let min_h = 32 * 2;
+let width_ = Math.random() * (max_w - min_w) + min_w;
+let height_ = Math.random() * (max_h - min_h) + min_h;
+---
+
+<div
+  class="break-inside-avoid flex bg-[#ffffff]/10 rounded-2xl justify-center border border-white/10 items-center mb-3 hover:scale-200 transition-transform duration-500 hover:border-1 hover:border-emerald-300 hover:bg-white/30"
+  style={`width: ${height_}px; height: ${height_}px`}
+>
+  <img src={url} width="16" height="16" class="m-[0px]" />
+</div>

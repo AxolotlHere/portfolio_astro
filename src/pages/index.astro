@@ -1,35 +1,193 @@
-
 ---
-import "../styles/global.css"
+import "../styles/global.css";
+import grogu from "../assets/grogu.png";
+import TekBox from "../components/tekBox.astro";
 ---
 
 <html>
-	<head>
-		<title>Portfolio ahh</title>
-	</head>
-	<body class="bg-[url('../assets/falcon.jpg')] fade-in-bg  bg-top bg-contain bg-repeat-x min-h-[100vh]">
-		<div class="align-middle">
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-				<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-		<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
+  <head>
+    <title>Portfolio ahh</title>
+  </head>
+  <body>
+    <div class="bg-black flex flex-col relative w-screen h-[100%]">
+      <div
+        class="absolute -mask-linear-180 mask-linear-from-90% mask-linear-to-100% bg-[url('../assets/falcon.jpg')] bg-cover bg-top bg-no-repeat min-h-[100vh] w-screen"
+      >
+      </div>
+      <div
+        class="flex flex-col relative z-100 min-h-[100vh] justify-center items-center pt-[60px]"
+      >
+        <div
+          class="mask-linear-180 mask-linear-from-40% mask-linear-to-90% border-[3px] border-[rgba(255,255,255,0.4)] w-[400px] h-[400px] whitespace-nowrap rounded-full flex items-center justify-center"
+        >
+          <div
+            class="mask-linear-0 mask-linear-from-40% mask-linear-to-90% border-[3px] border-[rgba(255,255,255,0.4)] w-[250px] h-[250px] whitespace-nowrap rounded-full flex items-center justify-center"
+          >
+            <div
+              class="w-full h-full rounded-full flex flex-col items-center justify-center"
+            >
+              <p class="text-white font-clash font-semibold">
+                HELLO THERE, I AM
+              </p>
+              <p class="text-white font-clash font-extrabold text-2xl">
+                NAVEEN BHARATH
+              </p>
+              <div
+                id="cycler"
+                class="text-white font-clash opacity-100 transition-opacity duration-500 font-semibold pt-2"
+              >
+                STUDENT
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-[1px] h-[50px] justify-self-center bg-white/40"></div>
+        <p class="semibold font-clash text-white animate-bounce">SCROLL DOWN</p>
+        <div
+          class="flex flex-col justify-center items-center mask-linear-0 mask-linear-from-70% mask-linear-to-90% bg-[url('../assets/bg_1.jpg')] bg-cover bg-fixed w-screen h-max"
+        >
+          <div class="w-[1px] h-[300px] justify-self-center bg-white/40"></div>
+          <p
+            class="font-bold text-2xl font-stretch-[300px] text-white pl-[50px] font-clash"
+          >
+            ABOUT ME
+          </p>
+          <div
+            class="w-[1px] h-[25px] justify-self-center bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(255,255,255,0.4)_20%,rgba(255,255,255,0.4)_80%,rgba(0,0,0,0)_100%)]"
+          >
+          </div>
+          <div class="w-[1px] h-[15px] justify-self-center bg-white/40"></div>
 
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
-			<p class="text-9xl font-clash font-semibold font-stretch-110%">HELLO THERE, I AM</p>
+          <div class="flex flex-row overflow-hidden justify-center w-full">
+            <div
+              class="text-white text-sm font-clash w-[250px] text-left pt-[80px] tracking-widest"
+            >
+              <p class="font-semibold text-center pb-1">BORING STUFF</p>
+              <p>
+                I'M A 19 Y/O PRE-FINAL YEAR STUDENT AT VIT CHENNAI PURSUING MY
+                ENGINEERING BACHELORS IN COMPUTER SCIENCE. MY HOBBIES ARE
+                PLAYING GAMES, RICING MY DISTRO, WATCHING ANIME. I'M A HUGE STAR
+                WARS FAN (surprise !!).
+              </p>
+            </div>
+            <div
+              class="mask-linear-180 mask-linear-from-40% mask-linear-to-90% border-[3px] border-[rgba(255,255,255,0.4)] w-[400px] h-[400px] whitespace-nowrap rounded-full flex items-center justify-center"
+            >
+              <div
+                class="mask-linear-0 mask-linear-from-40% mask-linear-to-90% border-[3px] border-[rgba(255,255,255,0.4)] w-[250px] h-[250px] whitespace-nowrap rounded-full flex items-center justify-center"
+              >
+                <div
+                  class="w-full h-full rounded-full flex flex-col items-center justify-around"
+                >
+                  <img src={grogu.src} alt="huh" width="150" height="150" />
+                </div>
+              </div>
+            </div>
+            <div
+              class="text-white text-sm font-clash w-[250px] text-right pt-[80px] pr-2 tracking-widest pb-2"
+            >
+              <p class="font-semibold text-center pb-1">ACTIVELY WORKING ON</p>
+              <ul>
+                <li>SYSTEM'S PROGRAMMING</li>
+                <li>MACHINE LEARNING</li>
+                <li>WEB3 DEVELOPMENT</li>
+                <li>ANDROID DEVELOPMENT</li>
+                <li>RED TEAMING AND PENTESTING</li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
+          <p
+            class="font-bold text-2xl font-stretch-[300px] text-white pr-[50px] font-clash"
+          >
+            TECH STACKS
+          </p>
+          <div
+            class="w-[1px] mt-[25px] h-[10px] justify-self-center bg-white/40"
+          >
+          </div>
 
-		</div>
-	</body>
+          <div class="flex w-full justify-center items-center gap-2">
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/Dart.png" name="C #" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/Csharp.png" name="C #" />
+              <TekBox url="/icons_tech/Flutter.png" name="C #" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/NET core.png" name="C #" />
+              <TekBox url="/icons_tech/NumPy.png" name="C #" />
+              <TekBox url="/icons_tech/Pandas.png" name="C #" />
+              <TekBox url="/icons_tech/PostgresSQL.png" name="C #" />
+              <TekBox url="/icons_tech/TensorFlow.png" name="C #" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/astro.png" name="C #" />
+
+              <TekBox url="/icons_tech/bash.png" name="C #" />
+              <TekBox url="/icons_tech/c.png" name="C #" />
+              <TekBox url="/icons_tech/cpp.png" name="C #" />
+              <TekBox url="/icons_tech/html.png" name="C #" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/css.png" name="C #" />
+              <TekBox url="/icons_tech/django.png" name="C #" />
+
+              <TekBox url="/icons_tech/python.png" name="C #" />
+              <TekBox url="/icons_tech/react.png" name="C #" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/rust.png" name="C #" />
+              <TekBox url="/icons_tech/typescript.png" name="C #" />
+              <TekBox url="/icons_tech/wagmi.png" name="C #" />
+            </div>
+            <div class="flex flex-col gap-1">
+              <TekBox url="/icons_tech/tailwind.png" name="C #" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-row">
+        <aside class="absolute flex flex-row top-0 right-[20px] z-100">
+          <ul
+            class="font-clash font-normal text-xs tracking-wide text-white/60 pt-[200px] pr-2 z-100"
+          >
+            <li class="py-3 decoration-white/80 underline">HOME</li>
+            <li class="py-3 decoration-white/80 underline">ABOUT ME</li>
+            <li class="py-3 decoration-white/80 underline">TECH STACKS</li>
+            <li class="py-3 decoration-white/80 underline">PROJECTS</li>
+          </ul>
+        </aside>
+        <div
+          class="w-[1px] bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_25%,rgba(255,255,255,0.2)_25%,rgba(255,255,255,0.4)_100%)] absolute h-full top-0 right-[10px]"
+        >
+        </div>
+      </div>
+      <script>
+        const l_1 = [
+          "Student",
+          "Systems Programmer",
+          "ML engineer",
+          "Blockchain Developer",
+          "Android Developer",
+          "linux enthusiast",
+          "Pentester",
+        ];
+        const cycler_ = document.getElementById("cycler");
+        let i = 1;
+
+        setInterval(() => {
+          cycler_.classList.remove("opacity-100");
+          cycler_.classList.add("opacity-0");
+          setTimeout(() => {
+            i = (i + 1) % l_1.length;
+            cycler_.textContent = l_1[i].toUpperCase();
+            cycler_.classList.remove("opacity-0");
+            cycler_.classList.add("opacity-100");
+          }, 500);
+        }, 3000);
+      </script>
+    </div>
+  </body>
 </html>

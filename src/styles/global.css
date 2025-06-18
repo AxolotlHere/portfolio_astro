@@ -1,25 +1,19 @@
 @import "tailwindcss";
 
+@import "tw-animate-css";
+
 @font-face {
   font-family: "ClashDisplay";
   src: url("/fonts/ClashDisplay-Variable.ttf") format("truetype");
   font-display: swap;
 }
 
+.gridTek{
+  padding: 10px;
+  column-count: 6;
+}
+
 .font-clash {
   font-family: "ClashDisplay", sans-serif;
 }
 
-@keyframes fade-in-bg {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
-}
-
- .fade-in-bg {
-  animation: fade-in-bg 2s ease-in-out forwards;
-}
