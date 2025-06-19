@@ -6,6 +6,8 @@ interface SlideData {
   title: string;
   button: string;
   desc: string;
+  skills: string;
+  link: string;
 }
 
 interface SlideProps {
@@ -62,13 +64,13 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
     event.currentTarget.style.opacity = "1";
   };
 
-  const { desc, button, title } = slide;
+  const { skills, link, desc, button, title } = slide;
 
   return (
-    <div className="[perspective:2400px] h-max [transform-style:preserve-3d]">
+    <div className="[perspective:4800px] h-max [transform>-style:preserve-3d]">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[500px] h-[250px] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[300px] h-[250px] mx-[4vmin] z-10 "
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -82,7 +84,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F]/40 rounded-xl overflow-hidden transition-all duration-150 ease-out"
+          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F]/40 rounded-xl overflow-hidden transition-all duration-150 ease-out hover:shadow-sm hover:shadow-white"
           style={{
             transform:
               current === index
@@ -91,7 +93,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <div
-            className="absolute inset-0 w-[500px] h-[250px] object-cover opacity-100 rounded-xl transition-opacity duration-600 ease-in-out border-1 border-white/0.4 hover:border-2"
+            className="absolute inset-0 w-[300px] h-[250px] object-cover opacity-100 rounded-xl transition-opacity duration-600 ease-in-out border-1 border-white/0.4 hover:border-2"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}
@@ -102,18 +104,27 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         </div>
 
         <div
-          className={`relative p-[10px] transition-opacity duration-1000 ease-in-out ${
-            current === index ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+          className={`relative p-[10px] transition-opacity w-full h-full duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
+            }`}
         >
-          <p className="text-md md:text-md lg:text-lg font-semibold relative font-clash">
+          <p className="text-md md:text-md lg:text-lg font-semibold relative font-clash mt-[4px]">
             {title}
           </p>
-          <p className="text-sm md:text-sm lg:text-md font-normal relative font-clash whitespace-break-spaces py-8">
-            {desc}
+          <div className="overflow-y-scroll no-scrollbar py-[4px] h-[100px]">
+            <p className="text-sm md:text-sm lg:text-md font-normal break-words font-clash py-8 text-left">
+              {desc}
+            </p>
+          </div>
+          <p className="text-xs font-normal break-words font-clash pt-8 text-left">
+            STACK USED : {skills}
           </p>
-          <div className="flex justify-end">
-            <button className="mt-6  px-4 w-fit mx-auto sm:text-sm text-white bg-white/20 h-12 border-2 border-white text-xs flex justify-center items-center rounded-2xl hover:shadow-lg transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+          <div className="flex flex-row justify-items-end py-[0px]">
+            <button
+              className=" bg-[#1D1F2F] py-2 px-2 w-fit ml-auto mr-0 text-white border-1 border-white text-[10px] flex justify-center items-center rounded-2xl transition duration-200 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)] hover:border-1 hover:bg-white/80 hover:text-black"
+              onClick={() => {
+                window.open(link, "_blank");
+              }}
+            >
               {button}
             </button>
           </div>
@@ -136,9 +147,8 @@ const CarouselControl = ({
 }: CarouselControlProps) => {
   return (
     <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#ffffff] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
-        type === "previous" ? "rotate-180" : ""
-      }`}
+      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#ffffff] focus:outline-none hover:-translate-y-1 active:translate-y-1 transition duration-200 ${type === "previous" ? "rotate-180" : ""
+        }`}
       title={title}
       onClick={handleClick}
     >
@@ -174,7 +184,7 @@ export default function Carousel({ slides }: CarouselProps) {
 
   return (
     <div
-      className="relative w-[70vmin] h-[400px] mx-[auto]"
+      className="relative w-[70vmin] h-[250px] mx-[auto]"
       aria-labelledby={`carousel-heading-${id}`}
     >
       <ul
@@ -193,20 +203,6 @@ export default function Carousel({ slides }: CarouselProps) {
           />
         ))}
       </ul>
-
-      <div className="absolute flex justify-center w-full top-[calc(100%+1rem)]">
-        <CarouselControl
-          type="previous"
-          title="Go to previous slide"
-          handleClick={handlePreviousClick}
-        />
-
-        <CarouselControl
-          type="next"
-          title="Go to next slide"
-          handleClick={handleNextClick}
-        />
-      </div>
     </div>
   );
 }
