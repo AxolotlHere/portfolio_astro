@@ -15,7 +15,13 @@ import { ExpTabs } from "@/components/ExpTabs";
   >
     <div class="bg-black flex flex-col relative w-screen h-[100%]">
       <div
-        class="absolute mask-linear-180 mask-linear-from-40% mask-linear-to-100% bg-[url('../assets/falcon.jpg')] bg-cover bg-fixed bg-no-repeat min-h-[100vh] w-screen"
+        id="falcon-bg"
+        class="absolute bg-[url('../assets/falcon.jpg')] bg-cover bg-no-repeat min-h-[100vh] w-screen"
+        style="
+          -webkit-mask: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+          mask: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+          background-attachment: fixed;
+        "
       >
       </div>
       <div
@@ -48,7 +54,13 @@ import { ExpTabs } from "@/components/ExpTabs";
         <p class="semibold font-clash text-white animate-bounce">SCROLL DOWN</p>
 
         <div
-          class="flex flex-col bg-[url('../assets/bg_mid.jpg')] mask-linear-0 mask-linear-from-40% mask-linear-to-100% justify-center items-center bg-cover bg-fixed w-screen h-full"
+          id="mid-bg"
+          class="flex flex-col justify-center items-center bg-[url('../assets/bg_mid.jpg')] bg-cover bg-no-repeat w-screen h-full"
+          style="
+            -webkit-mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+            mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
+            background-attachment: fixed;
+          "
         >
           <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
           <p
@@ -57,7 +69,7 @@ import { ExpTabs } from "@/components/ExpTabs";
             ABOUT ME
           </p>
           <div
-            class="w-[1px] h-[25px] justify-self-center bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(255,255,255,0.4)_20%,rgba(255,255,255,0.4)_80%,rgba(0,0,0,0)_100%)]"
+            class="w-[1px] h-[25px] justify-self-center bg-[linear-gradient(to_bottom,rgba(0,0,0,0)_0%,rgba(255,255,255,0.4)_20%,rgba(255,255,255,0.4)_80%,rgba(0,0,0,0)_100%)]"
           >
           </div>
           <div class="w-[1px] h-[15px] justify-self-center bg-white/40"></div>
@@ -108,41 +120,39 @@ import { ExpTabs } from "@/components/ExpTabs";
         <div class="w-[1px] h-[30px] justify-self-center bg-white/40"></div>
         <div class="flex w-full justify-center items-center gap-2">
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/Dart.png" name="C #" />
+            <TekBox url="/icons_tech/Dart.png" name="Dart" />
           </div>
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/Csharp.png" name="C #" />
-            <TekBox url="/icons_tech/Flutter.png" name="C #" />
+            <TekBox url="/icons_tech/Csharp.png" name="C#" />
+            <TekBox url="/icons_tech/Flutter.png" name="Flutter" />
           </div>
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/NET core.png" name="C #" />
-            <TekBox url="/icons_tech/NumPy.png" name="C #" />
-            <TekBox url="/icons_tech/rust.png" name="C #" />
-            <TekBox url="/icons_tech/PostgresSQL.png" name="C #" />
-            <TekBox url="/icons_tech/TensorFlow.png" name="C #" />
+            <TekBox url="/icons_tech/NET core.png" name=".NET" />
+            <TekBox url="/icons_tech/NumPy.png" name="NumPy" />
+            <TekBox url="/icons_tech/rust.png" name="Rust" />
+            <TekBox url="/icons_tech/PostgresSQL.png" name="PostgreSQL" />
+            <TekBox url="/icons_tech/TensorFlow.png" name="TensorFlow" />
           </div>
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/astro.png" name="C #" />
-
-            <TekBox url="/icons_tech/bash.png" name="C #" />
-            <TekBox url="/icons_tech/c.png" name="C #" />
-            <TekBox url="/icons_tech/cpp.png" name="C #" />
-            <TekBox url="/icons_tech/html.png" name="C #" />
+            <TekBox url="/icons_tech/astro.png" name="Astro" />
+            <TekBox url="/icons_tech/bash.png" name="Bash" />
+            <TekBox url="/icons_tech/c.png" name="C" />
+            <TekBox url="/icons_tech/cpp.png" name="C++" />
+            <TekBox url="/icons_tech/html.png" name="HTML" />
           </div>
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/css.png" name="C #" />
-            <TekBox url="/icons_tech/django.png" name="C #" />
-
-            <TekBox url="/icons_tech/python.png" name="C #" />
-            <TekBox url="/icons_tech/react.png" name="C #" />
+            <TekBox url="/icons_tech/css.png" name="CSS" />
+            <TekBox url="/icons_tech/django.png" name="Django" />
+            <TekBox url="/icons_tech/python.png" name="Python" />
+            <TekBox url="/icons_tech/react.png" name="React" />
           </div>
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/Pandas.png" name="C #" />
-            <TekBox url="/icons_tech/typescript.png" name="C #" />
-            <TekBox url="/icons_tech/wagmi.png" name="C #" />
+            <TekBox url="/icons_tech/Pandas.png" name="Pandas" />
+            <TekBox url="/icons_tech/typescript.png" name="TypeScript" />
+            <TekBox url="/icons_tech/wagmi.png" name="Wagmi" />
           </div>
           <div class="flex flex-col gap-1">
-            <TekBox url="/icons_tech/tailwind.png" name="C #" />
+            <TekBox url="/icons_tech/tailwind.png" name="Tailwind" />
           </div>
         </div>
         <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
@@ -157,7 +167,13 @@ import { ExpTabs } from "@/components/ExpTabs";
         </p>
         <div class="w-[1px] h-[20px] justify-self-center bg-white/40"></div>
         <div
-          class="mask-linear-0 mask-linear-from-50% mask-linear-to-100% bg-[url('../assets/bg_3.jpg')] bg-cover bg-top bg-no-repeat min-h-[80vh] w-screen"
+          id="exp-bg"
+          class="bg-[url('../assets/bg_3.jpg')] bg-cover bg-top bg-no-repeat min-h-[80vh] w-screen"
+          style="
+            -webkit-mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+            mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 100%);
+            background-attachment: fixed;
+          "
         >
           <div class="pl-2"><ExpTabs client:only="idle" /></div>
         </div>
@@ -166,6 +182,44 @@ import { ExpTabs } from "@/components/ExpTabs";
   </body>
 
   <script>
+    // Firefox/Zen Browser detection and fixes
+    const isGecko =
+      navigator.userAgent.toLowerCase().includes("firefox") ||
+      navigator.userAgent.toLowerCase().includes("zen") ||
+      typeof InstallTrigger !== "undefined";
+
+    if (isGecko) {
+      // Disable background-attachment: fixed for Firefox
+      const bgElements = ["falcon-bg", "mid-bg", "exp-bg"];
+      bgElements.forEach((id) => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.style.backgroundAttachment = "scroll";
+          // Add hardware acceleration
+          element.style.transform = "translateZ(0)";
+          element.style.willChange = "transform";
+          // Use simpler masks for Firefox
+          if (id === "falcon-bg") {
+            element.style.mask =
+              "linear-gradient(to bottom, black 0%, black 60%, transparent 100%)";
+            element.style.webkitMask =
+              "linear-gradient(to bottom, black 0%, black 60%, transparent 100%)";
+          } else if (id === "mid-bg") {
+            element.style.mask =
+              "linear-gradient(to bottom, transparent 0%, black 40%, black 100%)";
+            element.style.webkitMask =
+              "linear-gradient(to bottom, transparent 0%, black 40%, black 100%)";
+          } else if (id === "exp-bg") {
+            element.style.mask =
+              "linear-gradient(to bottom, transparent 0%, black 50%, black 100%)";
+            element.style.webkitMask =
+              "linear-gradient(to bottom, transparent 0%, black 50%, black 100%)";
+          }
+        }
+      });
+    }
+
+    // Text cycling animation
     const l_1 = [
       "Student",
       "Systems Programmer",
