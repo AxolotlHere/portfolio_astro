@@ -2,13 +2,14 @@
 import "../styles/global.css";
 import grogu from "../assets/grogu.png";
 import TekBox from "../components/tekBox.astro";
+import { CarouselDemo } from "@/components/bleedCarousel";
 ---
 
 <html>
   <head>
     <title>Portfolio ahh</title>
   </head>
-  <body>
+  <body class="overflow-x-hidden">
     <div class="bg-black flex flex-col relative w-screen h-[100%]">
       <div
         class="absolute -mask-linear-180 mask-linear-from-90% mask-linear-to-100% bg-[url('../assets/falcon.jpg')] bg-cover bg-top bg-no-repeat min-h-[100vh] w-screen"
@@ -46,7 +47,7 @@ import TekBox from "../components/tekBox.astro";
         <div
           class="flex flex-col justify-center items-center mask-linear-0 mask-linear-from-70% mask-linear-to-90% bg-[url('../assets/bg_1.jpg')] bg-cover bg-fixed w-screen h-max"
         >
-          <div class="w-[1px] h-[300px] justify-self-center bg-white/40"></div>
+          <div class="w-[1px] h-[500px] justify-self-center bg-white/40"></div>
           <p
             class="font-bold text-2xl font-stretch-[300px] text-white pl-[50px] font-clash"
           >
@@ -103,10 +104,9 @@ import TekBox from "../components/tekBox.astro";
             TECH STACKS
           </p>
           <div
-            class="w-[1px] mt-[25px] h-[10px] justify-self-center bg-white/40"
+            class="w-[1px] h-[30px] justify-self-center bg-white/40"
           >
           </div>
-
           <div class="flex w-full justify-center items-center gap-2">
             <div class="flex flex-col gap-1">
               <TekBox url="/icons_tech/Dart.png" name="C #" />
@@ -146,24 +146,19 @@ import TekBox from "../components/tekBox.astro";
               <TekBox url="/icons_tech/tailwind.png" name="C #" />
             </div>
           </div>
-        </div>
-      </div>
-      <div class="flex flex-row">
-        <aside class="absolute flex flex-row top-0 right-[20px] z-100">
-          <ul
-            class="font-clash font-normal text-xs tracking-wide text-white/60 pt-[200px] pr-2 z-100"
+          <div
+            class="w-[1px] h-[500px] justify-self-center bg-white/40"
           >
-            <li class="py-3 decoration-white/80 underline">HOME</li>
-            <li class="py-3 decoration-white/80 underline">ABOUT ME</li>
-            <li class="py-3 decoration-white/80 underline">TECH STACKS</li>
-            <li class="py-3 decoration-white/80 underline">PROJECTS</li>
-          </ul>
-        </aside>
-        <div
-          class="w-[1px] bg-[linear-gradient(to_bottom,rgba(255,255,255,0)_25%,rgba(255,255,255,0.2)_25%,rgba(255,255,255,0.4)_100%)] absolute h-full top-0 right-[10px]"
-        >
+          </div>>
+          <p class="text-white font-clash font-bold text-xl ml-[50px]">PROJECTS</p>
+          <div
+            class="w-[1px] h-[50px] justify-self-center bg-white/40"
+          >
+          </div>>
+        <CarouselDemo client:only="react" />
         </div>
       </div>
+      
       <script>
         const l_1 = [
           "Student",
