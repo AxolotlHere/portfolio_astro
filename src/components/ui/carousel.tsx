@@ -84,7 +84,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
         }}
       >
         <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F]/40 rounded-xl overflow-hidden transition-all duration-150 ease-out hover:shadow-sm hover:shadow-white"
+          className="absolute top-0 left-0 w-full h-full bg-[1D1F2F]/40 rounded-xl overflow-hidden transition-all duration-150 ease-out hover:shadow-sm hover:shadow-white"
           style={{
             transform:
               current === index
@@ -110,7 +110,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           <p className="text-md md:text-md lg:text-lg font-semibold relative font-clash mt-[4px]">
             {title}
           </p>
-          <div className="overflow-y-scroll no-scrollbar py-[4px] h-[100px]">
+          <div className="overflow-y-scroll scrollbar-hide py-[4px] h-[100px]">
             <p className="text-sm md:text-sm lg:text-md font-normal break-words font-clash py-8 text-left">
               {desc}
             </p>
