@@ -17,7 +17,7 @@ export function ExpTabs() {
         <TabsTrigger value="others">OTHERS</TabsTrigger>
       </TabsList>
       <TabsContent value="ospc">
-        <div className="w-[300px] h-[300px]">
+        <div className="w-[300px] h-[300px] scrollbar-hide">
           <div className="rounded-xl bg-[#1D1F2F]/50 border-1 border-white/80 w-full p-2 my-4">
             <p className="text-left font-clash font-semibold text-sm text-white pb-[2px]">
               OPEN SOURCE LEAD
@@ -53,7 +53,7 @@ export function ExpTabs() {
         </div>
       </TabsContent>
       <TabsContent value="ras">
-        <div className="w-[300px] h-[300px]">
+        <div className="w-[300px] h-[300px] scrollbar-hide">
           <div className="rounded-xl bg-[#1D1F2F]/50 border-1 border-white/80 w-full p-2 my-4">
             <p className="text-left font-clash font-semibold text-sm text-white pb-[2px]">
               SECRETARY
@@ -89,7 +89,7 @@ export function ExpTabs() {
         </div>
       </TabsContent>
       <TabsContent value="compsoc">
-        <div className="w-[300px] h-[300px]">
+        <div className="w-[300px] h-[300px] scrollbar-hide">
           <div className="rounded-xl bg-[#1D1F2F]/50 border-1 border-white/80 w-full p-2 my-4">
             <p className="text-left font-clash font-semibold text-sm text-white pb-[2px]">
               BITWARS'25 WEBDEV TEAM
@@ -117,7 +117,7 @@ export function ExpTabs() {
         </div>
       </TabsContent>
       <TabsContent value="others">
-        <div className="w-[300px] h-[300px] overflow-y-scroll">
+        <div className="w-[300px] h-[300px] overflow-y-scroll scrollbar-hide">
           <div className="rounded-xl bg-[#1D1F2F]/50 border-1 border-white/80 w-full p-2 my-4">
             <p className="text-left font-clash font-semibold text-sm text-white pb-[2px]">
               CYSCOM INTERNAL CTF - 3rd PLACE
