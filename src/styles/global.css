@@ -72,12 +72,6 @@
   font-display: swap;
 }
 
-html {
-  zoom: 1.29;
-  -moz-transform: scale(1);
-  -moz-transform-origin: 0 0;
-}
-
 .gridTek {
   padding: 10px;
   column-count: 6;
