@@ -67,10 +67,10 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
   const { skills, link, desc, button, title } = slide;
 
   return (
-    <div className="[perspective:4800px] h-max [transform>-style:preserve-3d]">
+    <div className="[perspective:4800px] h-max [transform>-style:preserve-3d] flex justify-center items-center">
       <li
         ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[300px] h-[250px] mx-[4vmin] z-10 "
+        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[500px] h-[250px] mx-[4vmin] z-10"
         onClick={() => handleSlideClick(index)}
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
@@ -93,7 +93,7 @@ const Slide = ({ slide, index, current, handleSlideClick }: SlideProps) => {
           }}
         >
           <div
-            className="absolute inset-0 w-[300px] h-[250px] object-cover opacity-100 rounded-xl transition-opacity duration-600 ease-in-out border-1 border-white/0.4 hover:border-2"
+            className="absolute inset-0 w-[500px] h-[250px] object-cover opacity-100 rounded-xl transition-opacity duration-600 ease-in-out border-1 border-white/0.4 hover:border-2"
             style={{
               opacity: current === index ? 1 : 0.5,
             }}

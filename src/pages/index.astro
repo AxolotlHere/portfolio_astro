@@ -28,7 +28,7 @@ import "aos/dist/aos.css";
   </head>
   <div
     id="loading-overlay"
-    class="fixed overflow-hidden top-0 left-0 w-screen h-screen z-[9999] bg-black flex items-center justify-center"
+    class="absolute overflow-hidden top-0 left-0 w-screen h-screen z-[9999] bg-black flex items-center justify-center"
   >
     <div class="text-white font-clash animate-pulse text-xl">LOADING...</div>
   </div>
@@ -71,8 +71,9 @@ import "aos/dist/aos.css";
       </div>
 
       <div
-        class="flex flex-col relative z-100 min-h-[100vh] justify-center items-center pt-[20px]"
+        class="flex flex-col relative z-100 w-full h-full justify-center items-center pt-[20px]"
       >
+      <div class="flex flex-col w-screen h-screen justify-center items-center ">
         <div
           class="outer-rings whitespace-nowrap rounded-full flex items-center justify-center"
         >
@@ -93,22 +94,25 @@ import "aos/dist/aos.css";
                 STUDENT
               </div>
             </div>
+            
           </div>
+          
         </div>
         <div class="w-[1px] h-[50px] justify-self-center bg-white/40"></div>
-
-        <p class="semibold font-clash text-white animate-bounce">SCROLL DOWN</p>
+                <p class="semibold font-clash text-white animate-bounce">SCROLL DOWN</p>
+            <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
+        </div>
 
         <div
           id="mid-bg"
-          class="flex flex-col justify-center items-center bg-[url('../assets/bg_mid.jpeg')] bg-cover bg-no-repeat w-screen h-full"
+          class="flex flex-col justify-center items-center bg-[url('../assets/bg_mid.jpeg')] bg-cover bg-no-repeat w-screen h-screen"
           style="
             -webkit-mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
             mask: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%, rgba(0,0,0,1) 100%);
             background-attachment: fixed;
           "
         >
-          <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
+
           <p
             class="font-bold text-2xl font-stretch-[300px] text-white pl-[50px] font-clash"
             data-aos="fade-left"
@@ -166,7 +170,7 @@ import "aos/dist/aos.css";
               </ul>
             </div>
           </div>
-          <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
+          <div class="w-[1px] h-60 justify-self-center bg-white/40"></div>
         </div>
         <div class="w-[1px] h-[150px] justify-self-center bg-white/40"></div>
         <div class="flex flex-col w-screen h-full items-center">
